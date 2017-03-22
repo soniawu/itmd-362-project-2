@@ -40,10 +40,15 @@ input { /* 1 */
 
 /* ITMD-362 Project-2 style sheet for Lab reservation */
 /* ===== BASE STYLES ===== */
-
+.hightlight {
+  font-weight: bold;
+}
 /* ===== LAYOUT STYLES ===== */
 #lab-grp, #date-grp, #time-grp  {
   display: block;
+  margin: 6px;
+}
+#labs, #lab-hr, #lab-limt {
   margin: 6px;
 }
 #reserve {
@@ -59,7 +64,22 @@ input { /* 1 */
 /* 500px 31.25em @ 16px */
 @media screen and (min-width: 31.25em) {
   /* For screen width greater than 500px */
- 
+  #main {
+    display: flex;
+    width: 100vm;
+  }
+  #lab-info {
+    order: 1;
+    flex: 5;
+  }
+  #reserve {
+    order: 2;
+    flex: 3;
+    border-left-style: double;
+    border-left-width: 3px;  /* 3px, 0.1667em @ 18px */
+    border-left-color: #7879be;
+    padding-left: 20px;
+  }
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {
