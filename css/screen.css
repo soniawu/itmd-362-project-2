@@ -57,7 +57,11 @@ h1{
   padding: 0 3.4375%;
 }
 
-
+#nav{
+  margin-left: 25%;
+  width: 75%;
+  background-color: #1C1C1B;
+}
 
 
 
