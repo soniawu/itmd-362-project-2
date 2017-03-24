@@ -53,6 +53,8 @@ h1{
   line-height: 1.448em; /* 22 * 4 = 88, 88/60.75 */
   color: #CC0000;
   background-color: #1C1C1B;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+  padding: 0 3.4375%;
 }
 
 
