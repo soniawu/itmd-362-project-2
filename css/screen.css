@@ -71,7 +71,17 @@ ul li{
   color: #FFFFFF;
 }
 
+hr{
+  margin: -.1em 5%;
+  color: #CC0000;
+  width: 65%;
+}
+
 /* ===== LAYOUT STYLES ===== */
+
+hr{
+  position: absolute;
+}
 
 #nav{
   margin-left: 25%;
