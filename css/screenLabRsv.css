@@ -1,0 +1,86 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable*/
+
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Form area normaliztion*/
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+/* End form normalization */
+
+/* ITMD-362 Project-2 style sheet for Lab reservation */
+/* ===== BASE STYLES ===== */
+.hightlight {
+  font-weight: bold;
+}
+/* ===== LAYOUT STYLES ===== */
+#lab-grp, #date-grp, #time-grp  {
+  display: block;
+  margin: 6px;
+}
+#labs, #lab-hr, #lab-limt {
+  margin: 6px;
+}
+#reserve {
+  margin-top: 15px;
+}
+.hide {
+  position: absolute;
+  left: -6000px;  /* -6000px -3333.333em @ 18px */
+}
+/* ===== MODULAR STYLES ===== */
+
+/* ===== STATE STYLES ===== */
+/* 500px 31.25em @ 16px */
+@media screen and (min-width: 31.25em) {
+  /* For screen width greater than 500px */
+  #main {
+    display: flex;
+    width: 100vm;
+  }
+  #lab-info {
+    order: 1;
+    flex: 5;
+  }
+  #reserve {
+    order: 2;
+    flex: 3;
+    border-left-style: double;
+    border-left-width: 3px;  /* 3px, 0.1667em @ 18px */
+    border-left-color: #7879be;
+    padding-left: 20px;
+  }
+/* For screen width greater than 700px */
+/*700px 43.75em @ 16px */
+@media screen and (min-width: 43.75em) {
+ 
