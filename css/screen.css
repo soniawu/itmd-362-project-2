@@ -103,10 +103,16 @@ hr{
 
 /* ===== MODULAR STYLES ===== */
 
-.inner{
+.inner {
   font-size: 1.5em; /* 27px/18 */
   line-height: 1.629em; /* 21.6 * 2 = 43.2, 43.2/27*/
-  display: none;
+  position: absolute;
+  right: 6000px;
+}
+
+.arrow {
+  position: absolute;
+  left: 90%;
 }
 
 .hightlight {
