@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/screenLabRsv.css" /> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans:300|Source+Sans+Pro:300|Source+Sans+Pro|Acme|Roboto|Titillium+Web:200" rel="stylesheet" />
+    <title>ITMD-362 Project 2 Lab Reservation</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Leave this part blank now. Will use the main page scheme late -->
+      <h1>Header will be snyned up with main page</h1>
+      <p>---------------------------------------</p>
+    </header>
+    
+    <main id="main">
+      <section id="lab-info">
+        <ul>
+          <li id="labs"> 
+            <span class="hightlight">Labs</span>
+            <ul>
+              <li>Alpha lab - located at Building A</li>
+              <li>Beta lab - located at Building B</li>
+              <li>Gumma lab - located at Building C</li>
+            </ul>
+          </li>
+          <li id="lab-hr">
+            <span class="hightlight">Lab hours:</span>
+            <ul>
+              <li>Monday, Tuesday, Thursday, Friday - 8:00am - 9:00pm</li>
+              <li>Wednsday - 12:00pm-12:00am</li>
+              <li>Saturday - 9:00am - 1:00pm</li>
+              <li>Sunday - close</li>
+            </ul>
+          </li>
+          <li id="lab-limt">
+            <span class="hightlight">Limitation:</span> Reserve only within 30 days, one hour time slot each time.
+          </li>
+        </ul>
+      </section>
+     
+      <section id="reserve">
+      
+        <article id="lab-grp" >
+          <label for="select-lab" id="sel-lab-lbl">Select a lab</label>
+          <select id="select-lab" name="select-lab">
+            <option value="noLab" selected>Select a lab</option>
+            <option value="alpha">Alpha lab</option>
+            <option value="beta">Beta lab</option>
+            <option value="gumma">Gumma lab</option>
+          </select>
+        </article>
+        
+        <article id="date-grp" class="hide">
+          <label for="select-date" id="sel-date-lbl" >Selete a Date</label>
+          <select id="select-date" name="select-date" >
+          </select>
+        </article>
+        
+        <article id="time-grp" class="hide">
+          <label for="select-time" id="sel-time-lbl">Select a time slot</label>
+          <select id="select-time" name="select-time">
+          </select>
+        </article>
+        
+        <button id="reserve-btn" name="reserve-btn" type="submit" class="hide">Reserve</button>
+        
+      </section>
+    </main>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../js/labRsv.js"></script>
+  </body>
+</html>
