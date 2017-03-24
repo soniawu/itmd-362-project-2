@@ -48,6 +48,13 @@ html{
   color: #000000;
 }
 
+h1{
+  font-size: 3.375em; /* 60.75/18 */
+  line-height: 1.448em; /* 22 * 4 = 88, 88/60.75 */
+  color: #CC0000;
+  background-color: #1C1C1B;
+}
+
 
 
 
