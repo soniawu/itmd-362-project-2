@@ -40,6 +40,18 @@ input { /* 1 */
 
 /* ITMD-362 Project-2 style sheet for Lab reservation */
 /* ===== BASE STYLES ===== */
+
+html{
+  font-size: 1.125em; /*18/16*/
+  line-height: 1.222em; /*18 * 120% = 21.6 to 22 */
+  background-color: white;
+  color: #000000;
+}
+
+
+
+
+
 .hightlight {
   font-weight: bold;
 }
