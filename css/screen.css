@@ -63,12 +63,22 @@ h1{
   background-color: #1C1C1B;
 }
 
-
-
-.hightlight {
-  font-weight: bold;
+ul li{
+  font-size: 1.5em; /* 27px/18 */
+  line-height: 1.629em; /* 22 * 2 = 44, 44/27*/
+  margin: .0 2.5%;
+  padding-left: 3.4375%;
+  color: #FFFFFF;
 }
+
 /* ===== LAYOUT STYLES ===== */
+
+#nav{
+  margin-left: 25%;
+  width: 75%;
+  background-color: #1C1C1B;
+}
+
 #lab-grp, #date-grp, #time-grp  {
   display: block;
   margin: 6px;
@@ -79,11 +89,17 @@ h1{
 #reserve {
   margin-top: 15px;
 }
+
+/* ===== MODULAR STYLES ===== */
+
+.hightlight {
+  font-weight: bold;
+}
+
 .hide {
   position: absolute;
   left: -6000px;  /* -6000px -3333.333em @ 18px */
 }
-/* ===== MODULAR STYLES ===== */
 
 /* ===== STATE STYLES ===== */
 /* 500px 31.25em @ 16px */
