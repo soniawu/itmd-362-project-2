@@ -102,6 +102,12 @@ hr{
 
 /* ===== MODULAR STYLES ===== */
 
+.inner{
+  font-size: 1.5em; /* 27px/18 */
+  line-height: 1.629em; /* 21.6 * 2 = 43.2, 43.2/27*/
+  display: none;
+}
+
 .hightlight {
   font-weight: bold;
 }
@@ -112,6 +118,7 @@ hr{
 }
 
 /* ===== STATE STYLES ===== */
+
 /* 500px 31.25em @ 16px */
 @media screen and (min-width: 31.25em) {
   /* For screen width greater than 500px */
