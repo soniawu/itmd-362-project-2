@@ -190,5 +190,5 @@ hr{
   }
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
-@media screen and (min-width: 43.75em) {
+@media screen and (min-width: 43.75em) {}
  
