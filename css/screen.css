@@ -90,6 +90,43 @@ hr{
   color: #FFFFFF;
 }
 
+#blackboard-icon img{
+  margin-top: -3.2em; 
+}
+
+#blackboard-icon figcaption{
+  font-size: 0.667em; /*12/16*/
+  line-height: 1.833em; /* 22/12 */ 
+  margin-top: -24em;
+  margin-left: 7px;  
+}
+
+#google-icon img{
+  margin-top: -3.2em; 
+}
+
+#google-icon figcaption{
+  font-size: 0.667em; /*12/16*/
+  line-height: 1.833em; /* 22/12 */ 
+  margin-top: 5em;
+  margin-left: 5px;  
+}
+
+#library-icon img{
+  margin-top: -3.2em; 
+}
+
+#library-icon figcaption{
+  font-size: 0.667em; /*12/16*/
+  line-height: 1.833em; /* 22/12 */ 
+  margin-top: 5em;
+  margin-left: 10px;  
+}
+
+#anoucments{
+  margin-top: 7em;
+}
+
 #lab-grp, #date-grp, #time-grp  {
   display: block;
   margin: 6px;
@@ -113,6 +150,12 @@ hr{
 .arrow {
   position: absolute;
   left: 90%;
+}
+
+.icon img{
+  position: absolute;
+  width: 60px;
+  left: 0;
 }
 
 .hightlight {
