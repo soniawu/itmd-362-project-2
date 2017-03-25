@@ -40,10 +40,93 @@ input { /* 1 */
 
 /* ITMD-362 Project-2 style sheet for Lab reservation */
 /* ===== BASE STYLES ===== */
-.hightlight {
-  font-weight: bold;
+
+html{
+  font-size: 1.125em; /*18/16*/
+  line-height: 1.222em; /*18 * 120% = 21.6 to 22 */
+  background-color: white;
+  color: #000000;
 }
+
+h1{
+  font-size: 3.375em; /* 60.75/18 */
+  line-height: 1.448em; /* 22 * 4 = 88, 88/60.75 */
+  color: #CC0000;
+  background-color: #1C1C1B;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+  padding: 0 3.4375%;
+}
+
+ul li{
+  margin: .0 2.5%;
+  padding-left: 3.4375%;
+}
+
+hr{
+  margin: -.1em 5%;
+  color: #CC0000;
+  width: 65%;
+}
+
 /* ===== LAYOUT STYLES ===== */
+
+hr{
+  position: absolute;
+}
+
+#iitlogo img{
+ position: absolute;
+ width: 80px;
+ margin-top: -5.5em;
+ margin-left: 60%;
+}
+
+#nav{
+  margin-left: 25%;
+  width: 75%;
+  font-size: 1.5em; /* 27px/18 */
+  line-height: 1.629em; /* 22 * 2 = 44, 44/27*/
+  background-color: #1C1C1B;
+  color: #FFFFFF;
+}
+
+#blackboard-icon img{
+  margin-top: -3.2em; 
+}
+
+#blackboard-icon figcaption{
+  font-size: 0.667em; /*12/16*/
+  line-height: 1.833em; /* 22/12 */ 
+  margin-top: -24em;
+  margin-left: 7px;  
+}
+
+#google-icon img{
+  margin-top: -3.2em; 
+}
+
+#google-icon figcaption{
+  font-size: 0.667em; /*12/16*/
+  line-height: 1.833em; /* 22/12 */ 
+  margin-top: 5em;
+  margin-left: 5px;  
+}
+
+#library-icon img{
+  margin-top: -3.2em; 
+}
+
+#library-icon figcaption{
+  font-size: 0.667em; /*12/16*/
+  line-height: 1.833em; /* 22/12 */ 
+  margin-top: 5em;
+  margin-left: 10px;  
+}
+
+#anoucments{
+  margin-top: 7em;
+}
+
 #lab-grp, #date-grp, #time-grp  {
   display: block;
   margin: 6px;
@@ -54,13 +137,38 @@ input { /* 1 */
 #reserve {
   margin-top: 15px;
 }
+
+/* ===== MODULAR STYLES ===== */
+
+.inner {
+  font-size: 1.5em; /* 27px/18 */
+  line-height: 1.629em; /* 21.6 * 2 = 43.2, 43.2/27*/
+  position: absolute;
+  right: 6000px;
+}
+
+.arrow {
+  position: absolute;
+  left: 90%;
+}
+
+.icon img{
+  position: absolute;
+  width: 60px;
+  left: 0;
+}
+
+.hightlight {
+  font-weight: bold;
+}
+
 .hide {
   position: absolute;
   left: -6000px;  /* -6000px -3333.333em @ 18px */
 }
-/* ===== MODULAR STYLES ===== */
 
 /* ===== STATE STYLES ===== */
+
 /* 500px 31.25em @ 16px */
 @media screen and (min-width: 31.25em) {
   /* For screen width greater than 500px */
@@ -82,5 +190,5 @@ input { /* 1 */
   }
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
-@media screen and (min-width: 43.75em) {
+@media screen and (min-width: 43.75em) {}
  
