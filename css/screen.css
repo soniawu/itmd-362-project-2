@@ -140,6 +140,13 @@ hr{
 
 /* ===== MODULAR STYLES ===== */
 
+.boxed {
+  background-image: url("../img/whiteOpaque.png");
+  opacity: 100%;
+  border: .25em solid darkred;
+  padding: 2%;
+}
+
 .inner {
   font-size: 1.5em; /* 27px/18 */
   line-height: 1.629em; /* 21.6 * 2 = 43.2, 43.2/27*/
@@ -172,6 +179,15 @@ hr{
 /* 500px 31.25em @ 16px */
 @media screen and (min-width: 31.25em) {
   /* For screen width greater than 500px */
+  #loginPage{
+    background-image: url("../img/iitOpaque.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    line-height: 1.25;
+    margin: 20 auto;
+    height: auto;
+  }    
+
   #main {
     display: flex;
     width: 100vm;
