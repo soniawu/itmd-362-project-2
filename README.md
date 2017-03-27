@@ -2,3 +2,4 @@
 # Group Members:
 #   Sonia Wu
 #   Mateusz Jachna
+#   Brian Curtis
