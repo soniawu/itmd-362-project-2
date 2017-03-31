@@ -178,11 +178,11 @@ hr{
   }
   #lab-info {
     order: 1;
-    flex: 5;
+    flex: 1;
   }
   #reserve {
     order: 2;
-    flex: 3;
+    flex: 1;
     border-left-style: double;
     border-left-width: 3px;  /* 3px, 0.1667em @ 18px */
     border-left-color: #7879be;

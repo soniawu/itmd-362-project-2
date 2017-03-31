@@ -12,30 +12,37 @@ $.noConflict();
       var dates = [];
       var daysAllowed = 30;
       var curTime = new Date();
-      
+      var selLab;
+      var selDate;
+      var selTime;
       // Listen to the form submit.
       $('#select-lab').on('change', function(e) {
-        var selLab = $('#select-lab').val();
-        
+        selLab = $('#select-lab').val();
         if (selLab !== 'noLab') {
           $('#date-grp').removeClass('hide');
           // show the lab available 
           genLabDates();
+          
+          if ($('#select-date').children().length>0) {
+            $('#select-date').empty();
+          }
           fillDateOpt();
           $('#select-date').on('change', function(e) {
-            var selDate = $('#select-date').val();
+            selDate = $('#select-date').val();
             if (selDate !== 'noDate') {
               $('#time-grp').removeClass('hide');
               
+              if ($('#select-time').children().length>0) {
+                $('#select-time').empty();
+                
+              }
               fillTimeOpt();
               
               $('#select-time').on('change', function() {
-                var selTime = $('#select-time').val();
+                selTime = $('#select-time').val();
                 if (selTime !== 'noTime') {
                   $('#reserve-btn').removeClass('hide');
-                  $('#reserve-btn').on('click', function() {
-                    // add handle submit button here
-                  });
+ 
                 } else {
                   $('#reserve-btn').addClass('hide');
                 }
@@ -44,14 +51,34 @@ $.noConflict();
               $('#time-grp').addClass('hide');
               $('#reserve-btn').addClass('hide');
             }
-            //e.preventDefault();
           });
+ 
         } else {
           $('#date-grp').addClass('hide');
           $('#time-grp').addClass('hide');
           $('#reserve-btn').addClass('hide');          
         }
-        e.preventDefault();
+                  $('#reserve-btn').on('click', function(e) {
+                    // add handle reserve button here
+                    //console.log(' entered ', e.bubbles);
+                    var obj = document.getElementById('select-date');
+                    var idx = obj.selectedIndex;
+                    selDate = obj.options[idx].text;
+                    obj = document.getElementById('select-time');
+                    idx = obj.selectedIndex;
+                    selTime = obj.options[idx].text;
+                    obj = document.getElementById('select-lab');
+                    idx = obj.selectedIndex;
+                    selLab = obj.options[idx].text;
+                    var successMsg = '(User name), you have reserved '+selDate+' '+selTime+' for '+selLab;
+                    $('#lab-grp').addClass('hide');
+                    $('#date-grp').addClass('hide');
+                    $('#time-grp').addClass('hide');
+                    $('#reserve-btn').addClass('hide');   
+                    //$('#reserve').append(successMsg);
+                    $('#reserve h2').html(successMsg)
+                    e.preventDefault();
+                  }); 
       });
       
       function fillTimeOpt() {
@@ -101,6 +128,7 @@ $.noConflict();
         }
       }
       function fillDateOpt() {
+        //var idx = $(#select-date)
         $('#select-date').append('<option value="noDate" selected>Select a date</option>');
         for (var i=0; i<dates.length; i++){
           $('#select-date').append('<option value="idx-'+i+'">'+dates[i]+'</option>');
