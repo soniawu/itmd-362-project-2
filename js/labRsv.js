@@ -75,7 +75,6 @@ $.noConflict();
                     $('#date-grp').addClass('hide');
                     $('#time-grp').addClass('hide');
                     $('#reserve-btn').addClass('hide');   
-                    //$('#reserve').append(successMsg);
                     $('#reserve h2').html(successMsg)
                     e.preventDefault();
                   }); 
