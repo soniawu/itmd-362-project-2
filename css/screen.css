@@ -126,19 +126,6 @@ hr{
 #anoucments{
   margin-top: 7em;
 }
-#lab-info {
-  font-size: 14px;
-}
-#reserve  {
-  display: block;
-  margin: 6px;
-}
-#labs, #lab-hr, #lab-limt {
-  margin: 6px;
-}
-#lab-grp, #date-grp, #time-grp {
-  margin-top: 6px;
-}
 
 /* ===== MODULAR STYLES ===== */
 
@@ -167,18 +154,6 @@ hr{
   left: 0;
 }
 
-.hightlight {
-  font-weight: bold;
-}
-
-.hide {
-  position: absolute;
-  left: -6000px;  /* -6000px -3333.333em @ 18px */
-}
-.h2-size {
-  font-size: 24px;
-  line-height: 30px;
-}
 /* ===== STATE STYLES ===== */
 
 /* 500px 31.25em @ 16px */
@@ -193,27 +168,10 @@ hr{
     height: auto;
   }    
 
-  #main {
+/*  #main {
     display: flex;
     width: 100vm;
-  }
-  #lab-info {
-    order: 1;
-    flex: 3;
-    background-color: #c7c1be;
-    margin-left: 10px;
-    border-radius: 6px;
-  }
-  #reserve {
-    order: 2;
-    flex: 5;
-    padding-left: 15%;
-    font-size: 24px;
-    margin-top: 15px;
-  }
-  #lab-grp {
-    margin-top: 15px;
-  }
+  } */
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {}
