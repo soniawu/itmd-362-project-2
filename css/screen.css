@@ -151,11 +151,6 @@ hr{
 #transcript-title {
   color: #d0c40a;
 }
-.trans-info-head {
-  padding: 6px;
-  margin-bottom: 6px;
-  box-shadow: 0 0 15px black;
-}
 /* ===== MODULAR STYLES ===== */
 
 .boxed {
@@ -185,6 +180,13 @@ hr{
 
 .trans-info-head {
   background-color: #7a97d6;
+  padding: 6px;
+  margin-bottom: 6px;
+  box-shadow: 0 0 15px black;
+}
+.hide {
+  position: absolute;
+  left: -6000px;  /* -6000px -3333.333em @ 18px */
 }
 /* ===== STATE STYLES ===== */
 

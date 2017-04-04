@@ -29,6 +29,10 @@ $.noConflict();
       $('#select-term').on('change',function() {
         term = $('#select-term').val();
         if (term != "noTerm") {
+          $('#slct-term').addClass('hide');
+          $('#std-info-head').addClass('trans-info-head');
+          $('#cur-info-head').addClass('trans-info-head');
+          $('#cls-info-head').addClass('trans-info-head');
           displayTranscript();
         }
       });
