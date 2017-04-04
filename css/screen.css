@@ -126,6 +126,10 @@ hr{
 #anoucments{
   margin-top: 7em;
 }
+#main {
+  background-color: #eee1e0;
+  margin: 20px;
+}
 #select-term {
   font-size: 0.778em;  /* 14px 14/18=0.778em */
   padding: 0.333em;    /* 6px 6/18=0.333em */
@@ -138,8 +142,8 @@ hr{
   margin-bottom: 0.556em; /* 10px 10/18=0.556em */
 }
 #display-transcript {
-  margin-top: 1em;  /* 18px 18/18=1em */
-  margin-left:0.889em;  /* 16px 16/18=0.889em */
+  margin: 1em 0.889em;  /* 18px 18/18=1em 16px 16/18=0.889em*/
+  padding-bottom: 0.889em; /* 16px 16/18=0.889em*/
 }
 #student-info, #curr-info, #class-list {
    margin-top: 0.833em;  /* 15px 15/18=0.833em */
@@ -147,7 +151,11 @@ hr{
 #transcript-title {
   color: #d0c40a;
 }
-
+.trans-info-head {
+  padding: 6px;
+  margin-bottom: 6px;
+  box-shadow: 0 0 15px black;
+}
 /* ===== MODULAR STYLES ===== */
 
 .boxed {
