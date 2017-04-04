@@ -151,6 +151,13 @@ hr{
 #transcript-title {
   color: #d0c40a;
 }
+#transcript-nav-bar {
+  margin: 10px;
+  padding: 6px;
+}
+#transcript-nav-bar li {
+  padding: 10px;
+}
 /* ===== MODULAR STYLES ===== */
 
 .boxed {
@@ -188,6 +195,15 @@ hr{
   position: absolute;
   left: -6000px;  /* -6000px -3333.333em @ 18px */
 }
+#transcript-nav-bar  li:nth-child(odd) {
+  background-color: #5c3531;
+  color: #eee1e0;
+}
+#transcript-nav-bar  li:nth-child(even) {
+  color: #5c3531;
+  background-color: white;
+}
+
 /* ===== STATE STYLES ===== */
 
 /* 500px 31.25em @ 16px */
@@ -201,11 +217,11 @@ hr{
     margin: 20 auto;
     height: auto;
   }    
+#transcript-nav-bar  li{
+  display: inline;
+  width: 30vm;
+}
 
-/*  #main {
-    display: flex;
-    width: 100vm;
-  } */
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {}

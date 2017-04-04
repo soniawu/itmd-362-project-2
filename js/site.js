@@ -37,6 +37,13 @@ $.noConflict();
         }
       });
       
+      $('#home-btn').on('click', function() {
+        document.location.href = '../main/index.html';
+      });
+      
+      $('#new-term-btn').on('click', function() {
+        location.reload();
+      });
       function displayTranscript() {
         // This block of data should be obtained from database
         var txt = "";
