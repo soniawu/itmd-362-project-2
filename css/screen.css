@@ -126,6 +126,27 @@ hr{
 #anoucments{
   margin-top: 7em;
 }
+#select-term {
+  font-size: 0.778em;  /* 14px 14/18=0.778em */
+  padding: 0.333em;    /* 6px 6/18=0.333em */
+}
+#slct-term {
+  margin-top: 1.667em;  /* 30px 30/18=1.667em */
+  margin-left: 20%;
+}
+#slct-term h2 {
+  margin-bottom: 0.556em; /* 10px 10/18=0.556em */
+}
+#display-transcript {
+  margin-top: 1em;  /* 18px 18/18=1em */
+  margin-left:0.889em;  /* 16px 16/18=0.889em */
+}
+#student-info, #curr-info, #class-list {
+   margin-top: 0.833em;  /* 15px 15/18=0.833em */
+}
+#transcript-title {
+  color: #d0c40a;
+}
 
 /* ===== MODULAR STYLES ===== */
 
@@ -154,6 +175,9 @@ hr{
   left: 0;
 }
 
+.trans-info-head {
+  background-color: #7a97d6;
+}
 /* ===== STATE STYLES ===== */
 
 /* 500px 31.25em @ 16px */
