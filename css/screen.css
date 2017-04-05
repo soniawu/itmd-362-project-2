@@ -48,7 +48,7 @@ html{
   color: #000000;
 }
 
-h1{
+#h1-main{
   font-size: 3.375em; /* 60.75/18 */
   line-height: 1.448em; /* 22 * 4 = 88, 88/60.75 */
   color: #CC0000;
@@ -246,9 +246,6 @@ span{
  } 
 */
 
- 
- 
- 
 /* ===== STATE STYLES ===== */
 
 /* 500px 31.25em @ 16px */
@@ -270,9 +267,3 @@ span{
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {}
- 
-
- 
- 
- 
-
