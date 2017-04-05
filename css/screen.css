@@ -152,11 +152,20 @@ hr{
   color: #d0c40a;
 }
 #transcript-nav-bar {
-  margin: 10px;
-  padding: 6px;
+  margin: 0.556em;   /* 10px 10/18=0.556em */
+  padding: 0.333em;    /* 6px 6/18=0.333em */
 }
 #transcript-nav-bar li {
-  padding: 10px;
+  padding: 0.556em;   /* 10px 10/18=0.556em */
+  
+}
+#cls-tbl {
+  font-family: "Archivo Narrow", Arial, Helvetica, sans-serif;
+} 
+#cls-tbl td,th {
+  padding: 0.167em;  /* 3px 3/18=0.167em */
+  font-size: 0.778em;   /* 14px 14/18=0.778em */
+  text-align: center;
 }
 /* ===== MODULAR STYLES ===== */
 
@@ -171,7 +180,7 @@ hr{
   font-size: 1.5em; /* 27px/18 */
   line-height: 1.629em; /* 21.6 * 2 = 43.2, 43.2/27*/
   position: absolute;
-  right: 6000px;
+  right: 6000px;  
 }
 
 .arrow {
@@ -187,13 +196,13 @@ hr{
 
 .trans-info-head {
   background-color: #7a97d6;
-  padding: 6px;
-  margin-bottom: 6px;
-  box-shadow: 0 0 15px black;
+  padding: 0.333em;    /* 6px 6/18=0.333em */
+  margin-bottom: 0.333em;    /* 6px 6/18=0.333em */
+  box-shadow: 0 0 0.833em black;  /* 15px 15/18=0.833em */
 }
 .hide {
   position: absolute;
-  left: -6000px;  /* -6000px -3333.333em @ 18px */
+  left: -3333.333em;  /* -6000px -3333.333em @ 18px */
 }
 #transcript-nav-bar  li:nth-child(odd) {
   background-color: #5c3531;
