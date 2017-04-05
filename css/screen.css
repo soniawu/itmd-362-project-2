@@ -81,13 +81,18 @@ hr{
  margin-left: 60%;
 }
 
-#nav{
+#nav ul{
   margin-left: 25%;
   width: 75%;
   font-size: 1.5em; /* 27px/18 */
   line-height: 1.629em; /* 22 * 2 = 44, 44/27*/
   background-color: #1C1C1B;
   color: #FFFFFF;
+}
+
+#nav ul li ul{
+  font-size: 1em;
+  line-height: 1.629em;
 }
 
 #blackboard-icon img{
@@ -166,10 +171,8 @@ hr{
 }
 
 .inner {
-  font-size: 1.5em; /* 27px/18 */
-  line-height: 1.629em; /* 21.6 * 2 = 43.2, 43.2/27*/
   position: absolute;
-  right: 6000px;
+  right: 3000px;
 }
 
 .arrow {
