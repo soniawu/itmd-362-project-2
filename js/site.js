@@ -49,6 +49,40 @@ $.noConflict();
         location.reload();
       });
       
+      $('#navAcademic').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c1');
+      });
+      
+      $('#navFinance').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c2');
+      });
+      
+      $('#navActivities').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c3');
+      });
+      
+      $('#navAdvisor').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c4');
+      });
+      
+      $('#navLinks').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c5');
+      });
+      
+      $('.navback').on('click', function(e) {
+        e.stopPropagation();
+        $('#nav').removeClass('c1');
+        $('#nav').removeClass('c2');
+        $('#nav').removeClass('c3');
+        $('#nav').removeClass('c4');
+        $('#nav').removeClass('c5');
+      });
+      
       function fillStrEndDate() {
         var selYear = "";
         var selSemester = "";
