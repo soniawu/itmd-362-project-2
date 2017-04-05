@@ -88,6 +88,8 @@ ul li{
 
 #nav ul li ul li:first-child{
   background-color: #CC0000;
+  padding: 0 5%;
+  margin: 0;
 }
 
 #nav ul li:after {
@@ -97,6 +99,17 @@ ul li{
   background: #CC0000;
   display: block;
   position: absolute;
+  margin: -1px 0 0 0;
+}
+
+#nav ul li ul li:after {
+  content: "";
+  height: 1px;
+  width: 73%;
+  background: #CC0000;
+  display: block;
+  position: absolute;
+  margin: -1px 0 0 0;
 }
 
 /*nav icons*/
@@ -174,12 +187,7 @@ ul li{
   border: .25em solid darkred;
   padding: 2%;
 }
-
-.inner {
-  position: absolute;
-  right: 3000px;
-}
-
+ 
 .arrow {
   position: absolute;
   left: 90%;
@@ -194,6 +202,53 @@ ul li{
 .trans-info-head {
   background-color: #7a97d6;
 }
+
+/*
+
+USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
+
+*/
+
+.inner {
+  position: absolute;
+  right: 3000px;
+  min-height: 13em;
+}
+
+/*
+span{
+  display: None;
+}
+
+ #academic {
+  right: 0;
+  margin-top: -3.25em;
+ }
+ 
+ #finance {
+  right: 0;
+  margin-top: -4.9em;
+ }
+
+#activ {
+  right: 0;
+  margin-top: -6.55em;
+ }
+
+#advisor {
+  right: 0;
+  margin-top: -8.18em;
+ }
+
+#links {
+  right: 0;
+  margin-top: -9.8em;
+ } 
+*/
+
+ 
+ 
+ 
 /* ===== STATE STYLES ===== */
 
 /* 500px 31.25em @ 16px */
@@ -216,3 +271,8 @@ ul li{
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {}
  
+
+ 
+ 
+ 
+
