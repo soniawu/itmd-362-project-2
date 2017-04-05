@@ -48,7 +48,7 @@ html{
   color: #000000;
 }
 
-h1{
+#h1-main{
   font-size: 3.375em; /* 60.75/18 */
   line-height: 1.448em; /* 22 * 4 = 88, 88/60.75 */
   color: #CC0000;
@@ -62,17 +62,7 @@ ul li{
   padding-left: 3.4375%;
 }
 
-hr{
-  margin: -.1em 5%;
-  color: #CC0000;
-  width: 65%;
-}
-
 /* ===== LAYOUT STYLES ===== */
-
-hr{
-  position: absolute;
-}
 
 #iitlogo img{
  position: absolute;
@@ -81,7 +71,8 @@ hr{
  margin-left: 60%;
 }
 
-#nav{
+/*nav*/
+#nav ul{
   margin-left: 25%;
   width: 75%;
   font-size: 1.5em; /* 27px/18 */
@@ -90,6 +81,38 @@ hr{
   color: #FFFFFF;
 }
 
+#nav ul li ul{
+  font-size: 1em;
+  line-height: 1.629em;
+}
+
+#nav ul li ul li:first-child{
+  background-color: #CC0000;
+  padding: 0 5%;
+  margin: 0;
+}
+
+#nav ul li:after {
+  content: "";
+  height: 1px;
+  width: 55%;
+  background: #CC0000;
+  display: block;
+  position: absolute;
+  margin: -1px 0 0 0;
+}
+
+#nav ul li ul li:after {
+  content: "";
+  height: 1px;
+  width: 73%;
+  background: #CC0000;
+  display: block;
+  position: absolute;
+  margin: -1px 0 0 0;
+}
+
+/*nav icons*/
 #blackboard-icon img{
   margin-top: -3.2em; 
 }
@@ -176,13 +199,6 @@ hr{
   padding: 2%;
 }
 
-.inner {
-  font-size: 1.5em; /* 27px/18 */
-  line-height: 1.629em; /* 21.6 * 2 = 43.2, 43.2/27*/
-  position: absolute;
-  right: 6000px;  
-}
-
 .arrow {
   position: absolute;
   left: 90%;
@@ -234,4 +250,3 @@ hr{
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {}
- 
