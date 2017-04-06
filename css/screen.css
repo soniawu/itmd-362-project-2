@@ -59,10 +59,16 @@ html{
 }
 
 ul li{
-  margin: .0 2.5%;
+  margin: .0 2.5%; 
   padding-left: 3.4375%;
 }
-
+#transcript-header {
+  font-size: 30px;
+  line-height: 40px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+}
 /* ===== LAYOUT STYLES ===== */
 
 #iitlogo img{
@@ -152,7 +158,7 @@ ul li{
 }
 #main {
   background-color: #eee1e0;
-  margin: 20px;
+  margin: 10px;
 }
 #select-term {
   font-size: 0.778em;  /* 14px 14/18=0.778em */
@@ -175,14 +181,10 @@ ul li{
 #transcript-title {
   color: #d0c40a;
 }
-#transcript-nav-bar {
-  margin: 0.556em;   /* 10px 10/18=0.556em */
-  padding: 0.333em;    /* 6px 6/18=0.333em */
+#transcript-nav-bar, #transcript-nav-bar  li {
+  padding: 0.333em;
 }
-#transcript-nav-bar li {
-  padding: 0.556em;   /* 10px 10/18=0.556em */
-  
-}
+
 #cls-tbl {
   font-family: "Archivo Narrow", Arial, Helvetica, sans-serif;
 } 
@@ -294,10 +296,21 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
     margin: 20 auto;
     height: auto;
   }    
-#transcript-nav-bar  li{
-  display: inline;
-  width: 30vm;
-}
+  #main {
+    margin: 25px;
+  }
+  #transcript-nav-bar {
+    padding: 0; 
+    margin-bottom: 15px;
+  } 
+  #transcript-nav-bar  li{
+    float: left;
+    margin: 0;
+  }
+  #slct-term {
+    clear: both;
+    margin-top: 50px; 
+  }
 
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
