@@ -46,6 +46,7 @@ html{
   line-height: 1.222em; /*18 * 120% = 21.6 to 22 */
   background-color: white;
   color: #000000;
+  overflow-x: hidden;
 }
 
 #h1-main{
@@ -220,6 +221,57 @@ ul li{
   position: absolute;
   left: -3333.333em;  /* -6000px -3333.333em @ 18px */
 }
+
+/*
+
+USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
+
+*/
+#nav ul{
+  transition: all 1s;
+}
+
+.inner {
+  position: absolute;
+  left: 6000px;
+  min-height: 13em;
+}
+ 
+.c1 span, .c2 span, .c3 span, .c4 span, .c5 span{
+  display: None;
+}
+
+.c1 #academic {
+  left: 0;
+  margin-top: -3.25em;
+  transition:left .5s;
+ }
+
+.c2 #finance {
+  left: 0;
+  margin-top: -4.9em;
+  transition:left .5s;
+ }
+
+.c3 #activ {
+  left: 0;
+  margin-top: -6.55em;
+  transition:left .5s;
+ }
+
+.c4 #advisor {
+  left: 0;
+  margin-top: -8.18em;
+  transition:left .5s;
+ }
+
+.c5 #links {
+  left: 0;
+  margin-top: -9.8em;
+  transition:left .5s;
+ } 
+
+
 #transcript-nav-bar  li:nth-child(odd) {
   background-color: #5c3531;
   color: #eee1e0;
