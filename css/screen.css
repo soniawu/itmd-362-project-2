@@ -277,12 +277,16 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 #transcript-nav-bar  li:nth-child(odd) {
   background-color: #5c3531;
   color: #eee1e0;
+  cursor: pointer;
 }
 #transcript-nav-bar  li:nth-child(even) {
   color: #5c3531;
   background-color: white;
+  cursor: pointer;
 }
-
+#transcript-nav-bar  li:hover {
+  background-color: red;
+}
 /* ===== STATE STYLES ===== */
 
 /* 500px 31.25em @ 16px */
