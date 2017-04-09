@@ -9,9 +9,8 @@
     </title>
   </head>
   <body>
-    <div id="loginMenu">
-      <h3>myIIT Login 
-      </h3>
+    <section id="loginMenu">
+      <h3>myIIT Login </h3>
       <form>
       	<select name="url" onchange="menu(this.form)" id="loginDropdown">
           <option value="">Login</option>
@@ -21,22 +20,21 @@
           <option value="https://pws.iit.edu/hr/policies-and-procedures-manual">Policies</option>
         </select>
       </form>
-    </div>
-    <div id="loginNavbar">
-      <form method="POST" onsubmit="return login(this);" >
-        <fieldset class="boxed"> <legend>Login </legend>
-          <p>Username:
-					</p>
-          <input name="username" placeholder="IIT ID Name" type="text">
-          <p>Password:
-          </p>
-          <input name="pwd" placeholder="Password" type="password"> 
-          <input value="Login" type="submit">
+    </section>
+    <section id="loginNavbar">
+      <form method="POST" onsubmit="return login(this);">
+        <fieldset class="boxed"> 
+        	<legend>Login </legend>
+            <p>Username:</p>
+            <input name="username" placeholder="IIT ID Name" type="text">
+            <p>Password:</p>
+            <input name="pwd" placeholder="Password" type="password"> 
+            <input value="Login" type="submit">
         </fieldset>
       </form>
-    </div>
-    <div id="loginContent">
+    </section>
+    <section id="loginContent">
       <a href="http://support.iit.edu" target="_blank">Can't log in?</a>
-    </div>
+    </section>
 	</body>
 </html>
