@@ -4,6 +4,7 @@ $.noConflict();
 (function($) {
   $(document).ready(
     function() {
+      var userName = "David Wong";
       var classList = 
         [{classCode:"ITMD-361",
           className:"Fundamentals of Web Development", 
@@ -22,7 +23,7 @@ $.noConflict();
           level:"CE",grade:"A",startDate:"",endDate:"",credit:3}];
       var term = "noTerm";
 
-      
+      $('.user-name').html('Welcome '+userName);
       if ($('#select-term').children().length <= 0) {
         fillTermOpt();
       }
