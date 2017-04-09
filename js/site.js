@@ -32,13 +32,20 @@ $.noConflict();
         if (term != "noTerm") {
           fillStrEndDate();
 
-          
           $('#slct-term').addClass('hide');
           $('#std-info-head').addClass('trans-info-head');
           $('#cur-info-head').addClass('trans-info-head');
           $('#cls-info-head').addClass('trans-info-head');
           displayTranscript();
         }
+      });
+      
+      $('#ofc-tsc-btn').on('click', function() {
+        $('#ofc-tsc-popup').toggle();
+      });
+            
+      $('.close').on('click', function() {
+         $('#ofc-tsc-popup').toggle();
       });
       
       $('#home-btn').on('click', function() {

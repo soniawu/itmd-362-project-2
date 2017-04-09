@@ -63,9 +63,10 @@ ul li{
   padding-left: 3.4375%;
 }
 #transcript-header {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 1.667em;  /* 30px 30/18=1.667em */
+  line-height: 2.222em;  /* 40px 40/18=2.222em */
   background-color: gray;
+  box-shadow: inset 0 0 1.111em black;  /* 20px 20/18=1.111em */
   color: white;
   text-align: center;
 }
@@ -158,7 +159,8 @@ ul li{
 }
 #main {
   background-color: #eee1e0;
-  margin: 10px;
+  box-shadow: inset 0 0 0.556em #410000;  /* 10px 10/18=0.556em */
+  margin: 0.556em; /* 10px 10/18=0.556em */
 }
 #select-term {
   font-size: 0.778em;  /* 14px 14/18=0.778em */
@@ -214,10 +216,11 @@ ul li{
 }
 
 .trans-info-head {
-  background-color: #7a97d6;
+  background-color: #6d92a0;
+  color: #022735;
   padding: 0.333em;    /* 6px 6/18=0.333em */
   margin-bottom: 0.333em;    /* 6px 6/18=0.333em */
-  box-shadow: 0 0 0.833em black;  /* 15px 15/18=0.833em */
+  box-shadow: 0 0 0.167em black;  /* 3px 3/18=0.167em */
 }
 .hide {
   position: absolute;
@@ -275,17 +278,49 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 
 
 #transcript-nav-bar  li:nth-child(odd) {
-  background-color: #5c3531;
+  background-color: #410000;
   color: #eee1e0;
   cursor: pointer;
 }
 #transcript-nav-bar  li:nth-child(even) {
-  color: #5c3531;
-  background-color: white;
+  /*color: #5c3531; */
+  color: #410000;
+  background-color: #ccb3b3;
   cursor: pointer;
 }
 #transcript-nav-bar  li:hover {
-  background-color: red;
+  background-color: #b10000;
+}
+.popup {
+  display:none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left:0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  
+}
+.popup-cnt {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 /* ===== STATE STYLES ===== */
 
@@ -301,11 +336,11 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
     height: auto;
   }    
   #main {
-    margin: 25px;
+    margin: 1.563em; /* 25px  25/16=1.563em */
   }
   #transcript-nav-bar {
     padding: 0; 
-    margin-bottom: 15px;
+    margin-bottom: 1em;  /* 16px  16/16=1em */
   } 
   #transcript-nav-bar  li{
     float: left;
@@ -313,8 +348,11 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   }
   #slct-term {
     clear: both;
-    margin-top: 50px; 
+    margin-top: 3.125em; /* 50px 50/16=3.125em */
   }
+  #transcript-title {
+    clear: both;
+}
 
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
