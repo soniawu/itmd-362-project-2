@@ -1,0 +1,40 @@
+<html lang="en-US">
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/screen.css">
+  	<script src="js/site.js" language="JavaScript" type="text/javascript"> 
+    </script>
+		<title>Login Page
+    </title>
+  </head>
+  <body>
+    <section id="loginMenu">
+      <h3>myIIT Login </h3>
+      <form>
+      	<select name="url" onchange="menu(this.form)" id="loginDropdown">
+          <option value="">Login</option>
+          <option value="http://iit.edu/news/iittoday/">News</option>
+          <option value="http://web.iit.edu/directory/social-media">Social Media</option>
+          <option value="http://support.iit.edu/">Help</option>
+          <option value="https://pws.iit.edu/hr/policies-and-procedures-manual">Policies</option>
+        </select>
+      </form>
+    </section>
+    <section id="loginNavbar">
+      <form method="POST" onsubmit="return login(this);">
+        <fieldset class="boxed"> 
+        	<legend>Login </legend>
+            <p>Username:</p>
+            <input name="username" placeholder="IIT ID Name" type="text">
+            <p>Password:</p>
+            <input name="pwd" placeholder="Password" type="password"> 
+            <input value="Login" type="submit">
+        </fieldset>
+      </form>
+    </section>
+    <section id="loginContent">
+      <a href="http://support.iit.edu" target="_blank">Can't log in?</a>
+    </section>
+	</body>
+</html>

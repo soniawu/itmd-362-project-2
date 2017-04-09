@@ -212,3 +212,36 @@ $.noConflict();
       }
     })
 })(jQuery);
+
+function login(form){
+  if(form.username.value == "") {
+    alert("Error: Username cannot be blank!");
+    form.username.focus();
+    return false;
+  }
+
+  if(form.pwd.value != "") {
+    if(form.pwd.value.length < 6) {
+      alert("Error: Password must contain at least six characters!");
+      form.pwd.focus();
+      return false;
+    }
+
+  } else {
+    alert("Error: Password cannot be blank!");
+    form.pwd.focus();
+    return false;
+  }
+  
+  window.open("main/index.html");
+//  window.location("main/index.html");
+  return true;
+}
+
+function menu( menuform ){
+  selecteditem = menuform.url.selectedIndex ;
+  newurl = menuform.url.options[ selecteditem ].value ;
+  if (newurl.length != 0) {
+    location.href = newurl ;
+  }
+}
