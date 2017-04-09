@@ -21,6 +21,7 @@ $.noConflict();
           className:"Web Site Application Development", 
           level:"CE",grade:"A",startDate:"",endDate:"",credit:3}];
       var term = "noTerm";
+
       
       if ($('#select-term').children().length <= 0) {
         fillTermOpt();
@@ -29,10 +30,109 @@ $.noConflict();
       $('#select-term').on('change',function() {
         term = $('#select-term').val();
         if (term != "noTerm") {
+          fillStrEndDate();
+
+          $('#slct-term').addClass('hide');
+          $('#std-info-head').addClass('trans-info-head');
+          $('#cur-info-head').addClass('trans-info-head');
+          $('#cls-info-head').addClass('trans-info-head');
           displayTranscript();
         }
       });
       
+      $('#ofc-tsc-btn').on('click', function() {
+        $('#ofc-tsc-popup').toggle();
+      });
+            
+      $('.close').on('click', function() {
+         $('#ofc-tsc-popup').toggle();
+      });
+      
+      $('#home-btn').on('click', function() {
+        document.location.href = '../main/index.html';
+      });
+      
+      $('#new-term-btn').on('click', function() {
+        location.reload();
+      });
+      
+      $('#navAcademic').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c1');
+      });
+      
+      $('#navFinance').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c2');
+      });
+      
+      $('#navActivities').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c3');
+      });
+      
+      $('#navAdvisor').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c4');
+      });
+      
+      $('#navLinks').on('click', function(e) {
+        e.preventDefault();
+        $('#nav').addClass('c5');
+      });
+      
+      $('.navback').on('click', function(e) {
+        e.stopPropagation();
+        $('#nav').removeClass('c1');
+        $('#nav').removeClass('c2');
+        $('#nav').removeClass('c3');
+        $('#nav').removeClass('c4');
+        $('#nav').removeClass('c5');
+      });
+      
+      function fillStrEndDate() {
+        var selYear = "";
+        var selSemester = "";
+        var pattern = /(Spring|Summer|Fall).+(\d{4})/;
+        var matched = null;
+        var sDate = "";
+        var eDate = "";
+        var nextYear;
+        
+        matched = term.match(pattern);
+          if(matched) {
+            selYear = matched[2];
+            selSemester = matched[1]; 
+          } else if (matched = term.match(/(\d{4}).+Professional Learning/)) {
+            selYear = matched[1];
+            selSemester = "PL";
+          }         
+          
+          switch(selSemester) {
+            case "Spring" : 
+              sDate = "Feb 20, " + selYear;
+              eDate = "May 15, " + selYear;
+              
+              break;
+            case "Summer" :
+              sDate = "Jun 12, " + selYear;
+              eDate = "Aug 3, " + selYear;                
+              break;
+            case "Fall" :
+            case "PL" :
+              sDate = "Aug 20, " + selYear;
+              nextYear = Number(selYear)+1;
+              eDate = "Jan 25, " + nextYear;
+              break;    
+          }
+          console.log(sDate,eDate);
+          
+          for (var i=0; i<classList.length; i++) {
+            classList[i].startDate = sDate;
+            classList[i].endDate = eDate;
+          }
+      }  // fillStrEndDate()
+        
       function displayTranscript() {
         // This block of data should be obtained from database
         var txt = "";
@@ -89,6 +189,9 @@ $.noConflict();
         }
       }  // displayTranscript()
       
+      /* 
+        Function to fill the term selection options.
+      */
       function fillTermOpt() {
         var numOfYears = 10;
         var currYear = (new Date()).getFullYear();

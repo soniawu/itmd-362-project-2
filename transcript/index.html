@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css" /> 
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
     <title>ITMD-362 Project 2 Transcript</title>
   </head>
 
@@ -11,29 +12,46 @@
     <header>
       <!-- Leave this part blank now. Will use the main page scheme late -->
       <!-- <h1 class="red-text">Header will be snyned up with main page</h1> -->
-      <h1>MyIIT</h1>
+      <h1 id="h1-main">MyIIT</h1>
+      <p>Welcome (NAME)</p>
       <figure id="iitlogo">
-        <img src="img/iitlogo.png" alt="iit logo"/> 
+        <img src="../img/iitlogo.png" alt="iit logo"/> 
       </figure>
     </header>
     
     <main id="main">
       <h1 id="transcript-header">Internal Transcript</h1>
-      <section id="slct-term">
-        <h2>Select a term for trnscript</h2>
-        <select  name="select-term" id="select-term"></select>
+      
+      <section id="transcript-nav-bar">
+        <ul>
+          <li id="home-btn">Back to HOME Page</li>
+          <li id="ofc-tsc-btn">Official Transcript</li>
+
+          <li id="new-term-btn">Select Another Term</li>
+        </ul>
+        <article id="ofc-tsc-popup" class="popup">
+          <article class="popup-cnt">
+            <span class="close">&times;</span>
+            <p>Official Transcript page is not for next project :)</p>
+          </article>
+        </article>
       </section>
       
+      <section id="slct-term">
+        <h2>Select a term for your trnscript</h2>
+        <select  name="select-term" id="select-term"></select>
+      </section>
+   
       <section id="display-transcript">
         <h2 id="transcript-title"></h2>
         <article id="student-info">
-          <h3 id="std-info-head" class="trans-info-head"></h3>
+          <h3 id="std-info-head"></h3>
         </article>
         <article id="curr-info">
-          <h3 id="cur-info-head" class="trans-info-head"></h3>
+          <h3 id="cur-info-head"></h3>
         </article>
         <article id="class-list">
-          <h3 id="cls-info-head" class="trans-info-head"></h3>
+          <h3 id="cls-info-head"></h3>
         </article>
       </section>
      
