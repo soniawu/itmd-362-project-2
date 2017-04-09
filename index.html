@@ -1,54 +1,42 @@
-<!DOCTYPE html>
-          <html lang="en-US">
-            <head>
-              <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-              <link rel="stylesheet" href="css/screen.css">
-              <script src="js/password.js" language="JavaScript" type="text/javascript"> </script>
-              
-              <script src="js/chgoto.js" language="JavaScript" type="text/javascript"> </script>
-              <title>Login Page</title>
-            </head>
-            <body>
-              <div id="loginMenu">
-                <h1>myIIT Login </h1>
-                <form>
-                  <select name="url" onchange="menu_goto(this.form)" id="loginDropdown">
-                    <option value="">Login</option>
-                    <option value="http://iit.edu/news/iittoday/">News</option>
-                    <option value="http://web.iit.edu/directory/social-media">Social Media</option>
-                    <option value="http://support.iit.edu/">Help</option>
-                    <option value="https://pws.iit.edu/hr/policies-and-procedures-manual">Policies</option>
-                  </select>
-                </form>
-              </div>
-              <div id="loginNavbar">
-                <form action="main/index.html" method="get" class="loginNavbar">
-                  <fieldset class="boxed"> <legend>Login </legend>
-                    <p>Username:</p>
-                    <input name="username" placeholder="IIT ID Name" type="text">
-                    <p>Password:</p>
-                    <input name="password" placeholder="Password" type="password"> <input
-
-value="Login" type="submit">
-        </fieldset>
+<html lang="en-US">
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/screen.css">
+  	<script src="js/site.js" language="JavaScript" type="text/javascript"> 
+    </script>
+		<title>Login Page
+    </title>
+  </head>
+  <body>
+    <div id="loginMenu">
+      <h3>myIIT Login 
+      </h3>
+      <form>
+      	<select name="url" onchange="menu(this.form)" id="loginDropdown">
+          <option value="">Login</option>
+          <option value="http://iit.edu/news/iittoday/">News</option>
+          <option value="http://web.iit.edu/directory/social-media">Social Media</option>
+          <option value="http://support.iit.edu/">Help</option>
+          <option value="https://pws.iit.edu/hr/policies-and-procedures-manual">Policies</option>
+        </select>
       </form>
     </div>
-    <div>
-      <form method="POST" onsubmit="return checkForm(this);">
-        <fieldset class="boxed">
-          <label>Username
-          </label>
-          <input name="username" type="text">
-          <label>Password
-          </label>
-          <input name="pwd1" type="password">
-          <input type="submit">
+    <div id="loginNavbar">
+      <form method="POST" onsubmit="return login(this);" >
+        <fieldset class="boxed"> <legend>Login </legend>
+          <p>Username:
+					</p>
+          <input name="username" placeholder="IIT ID Name" type="text">
+          <p>Password:
+          </p>
+          <input name="pwd" placeholder="Password" type="password"> 
+          <input value="Login" type="submit">
         </fieldset>
       </form>
     </div>
     <div id="loginContent">
-      <a href="http://support.iit.edu">Can't log in?</a>
-      <h2>Navigation Menu</h2>
+      <a href="http://support.iit.edu" target="_blank">Can't log in?</a>
     </div>
-</body></html>
+	</body>
+</html>
