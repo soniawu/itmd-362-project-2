@@ -41,7 +41,7 @@ input { /* 1 */
 /* ITMD-362 Project-2 style sheet for Lab reservation */
 /* ===== BASE STYLES ===== */
 
-html{
+html {
   font-size: 1.125em; /*18/16*/
   line-height: 1.222em; /*18 * 120% = 21.6 to 22 */
   background-color: white;
@@ -49,26 +49,28 @@ html{
   overflow-x: hidden;
 }
 
-#h1-main{
+#h1-main {
   font-size: 3.375em; /* 60.75/18 */
   line-height: 1.448em; /* 22 * 4 = 88, 88/60.75 */
   color: #CC0000;
   background-color: #1C1C1B;
-  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+  /* 1px 1/60.18=0.016em, 2px 2/60.75=0.033em */
+  text-shadow: 0.016em 0.016em 0.033em white, 0 0 1em white, 0 0 0.2em white;
   padding: 0 3.4375%;
 }
 
-h3{
+#loginMenu h3 {
   font-size: 3.375em; /* 60.75/18 */
   line-height: 1.448em; /* 22 * 4 = 88, 88/60.75 */
   color: #CC0000;
   background-color: #1C1C1B;
-  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+  /* 1px 1/60.18=0.016em, 2px 2/60.75=0.033em */
+  text-shadow: 0.016em 0.016em 0.033em white, 0 0 1em white, 0 0 0.2em white;
   padding: 0 3.4375%;
 }
 
-ul li{
-  margin: .0 2.5%; 
+ul li {
+  margin: 0 2.5%;
   padding-left: 3.4375%;
 }
 #transcript-header {
@@ -81,14 +83,15 @@ ul li{
 }
 /* ===== LAYOUT STYLES ===== */
 
-#iitlogo img{
- position: absolute;
- width: 80px;
- margin-top: -5.5em;
- margin-left: 60%;
+#iitlogo img {
+  position: absolute;
+  width: 4.444em; /* 80px 80/18=4.444em */
+  margin-top: -5.5em;
+  margin-left: 60%;
 }
 
 /*nav*/
+
 #nav a{
   color: #FFFFFF;
   text-decoration: none;
@@ -103,12 +106,17 @@ ul li{
   color: #FFFFFF;
 }
 
-#nav ul li ul{
+#nav ul li ul {
   font-size: 1em;
   line-height: 1.629em;
 }
 
-#nav ul li ul li:first-child{
+#transcript-nav-bar,
+#transcript-nav-bar  li {
+  padding: 0.333em;
+}
+
+#nav ul li ul li:first-child {
   background-color: #CC0000;
   padding: 0 5%;
   margin: 0;
@@ -116,37 +124,37 @@ ul li{
 
 #nav ul li:after {
   content: "";
-  height: 1px;
+  height: 0.056em; /* 1px 1/18=0.056em */
   width: 55%;
   background: #CC0000;
   display: block;
   position: absolute;
-  margin: -1px 0 0 0;
+  margin: -0.056em 0 0 0; /* -1px 1/18=0.056em */
 }
 
 #nav ul li ul li:after {
   content: "";
-  height: 1px;
+  height: 0.056em; /* 1px 1/18=0.056em */
   width: 73%;
   background: #CC0000;
   display: block;
   position: absolute;
-  margin: -1px 0 0 0;
+  margin: -0.056em 0 0 0; /* -1px 1/18=0.056em */
 }
 
 /*nav icons*/
+
 #blackboard-icon img{
   margin-top: -3.2em; 
   margin-left: 3%;
 }
 
-#blackboard-icon figcaption{
+#blackboard-icon figcaption {
   font-size: 0.667em; /*12/16*/
-  line-height: 1.833em; /* 22/12 */ 
+  line-height: 1.833em; /* 22/12 */
   margin-top: -24em;
   margin-right: 75%;
   text-align: center;
-  
 }
 
 #google-icon img{
@@ -154,9 +162,9 @@ ul li{
   margin-left: 3%;
 }
 
-#google-icon figcaption{
+#google-icon figcaption {
   font-size: 0.667em; /*12/16*/
-  line-height: 1.833em; /* 22/12 */ 
+  line-height: 1.833em; /* 22/12 */
   margin-top: 5em;
   margin-right: 75%;
   text-align: center;  
@@ -167,9 +175,9 @@ ul li{
   margin-left: 3%;
 }
 
-#library-icon figcaption{
+#library-icon figcaption {
   font-size: 0.667em; /*12/16*/
-  line-height: 1.833em; /* 22/12 */ 
+  line-height: 1.833em; /* 22/12 */
   margin-top: 5em;
   margin-right: 75%;
   text-align: center;  
@@ -232,19 +240,16 @@ ul li{
   padding-bottom: 0.889em; /* 16px 16/18=0.889em*/
 }
 #student-info, #curr-info, #class-list {
-   margin-top: 0.833em;  /* 15px 15/18=0.833em */
+  margin-top: 0.833em;  /* 15px 15/18=0.833em */
 }
 #transcript-title {
   color: #d0c40a;
 }
-#transcript-nav-bar, #transcript-nav-bar  li {
-  padding: 0.333em;
-}
 
 #cls-tbl {
   font-family: "Archivo Narrow", Arial, Helvetica, sans-serif;
-} 
-#cls-tbl td,th {
+}
+#cls-tbl td, th {
   padding: 0.167em;  /* 3px 3/18=0.167em */
   font-size: 0.778em;   /* 14px 14/18=0.778em */
   text-align: center;
@@ -255,7 +260,7 @@ ul li{
 .boxed {
   background-image: url("../img/whiteOpaque.png");
   opacity: 100%;
-  border: .25em solid darkred;
+  border: 0.25em solid darkred;
   padding: 2%;
   width: 25%;
 }
@@ -265,9 +270,9 @@ ul li{
   left: 90%;
 }
 
-.icon img{
+.icon img {
   position: absolute;
-  width: 60px;
+  width: 3.333em; /* 60px 60/18=3.333em */
   left: 0;
 }
 
@@ -288,9 +293,10 @@ ul li{
 USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 
 */
-#nav ul{
+#nav ul {
   transition: all 1s;
 }
+
 
 #transcript-nav-bar  li:nth-child(odd) {
   background-color: #410000;
@@ -307,28 +313,27 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   background-color: #b10000;
 }
 .popup {
-  display:none;
+  display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 50px;
-  left:0;
+  padding-top: 2.778em;  /* 50px 50/18=2.778em */
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
-  
 }
 .popup-cnt {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
+  padding: 1.111em;  /* 20px 20/18=1.111em */
+  border: 0.056em solid #888;  /* 1px 1/18=0.056em */
   width: 80%;
 }
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 1.556em;  /* 28px 28/18=1.556em */
   font-weight: bold;
 }
 .close:hover,
@@ -352,33 +357,31 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 }
 
 /* 500px 31.25em @ 16px */
-@media screen and (min-width: 31.25em) {}
+@media screen and (min-width: 31.25em) {
   /* For screen width greater than 500px */
-  #loginPage{
+  #loginPage {
     background-image: url("../img/iitOpaque.png");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     line-height: 1.25;
     margin: 20 auto;
     height: auto;
-  } 
-}
-#loginMenu{
-  background-color: #1C1C1B;
-  
-}    
-#loginDropdown{
-  margin: .8em; 
-}
+  }
 
+  #loginMenu {
+    background-color: #1C1C1B;
+  }
+  #loginDropdown {
+    margin: 0.8em;
+  }
   #main {
     margin: 1.563em; /* 25px  25/16=1.563em */
   }
   #transcript-nav-bar {
-    padding: 0; 
+    padding: 0;
     margin-bottom: 1em;  /* 16px  16/16=1em */
-  } 
-  #transcript-nav-bar  li{
+  }
+  #transcript-nav-bar  li {
     float: left;
     margin: 0;
   }
@@ -388,6 +391,10 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   }
   #transcript-title {
     clear: both;
+  }
+  #cls-tbl {
+    font-size: 1.25em; /* 20px  20/16=1.25em */
+  }
 }
 
 /* For screen width greater than 700px */
@@ -442,5 +449,3 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
  } 
 
 /*}*/
-
-
