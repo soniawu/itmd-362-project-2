@@ -252,9 +252,9 @@ function login(form){
     return false;
   }
   
-  window.open("main/index.html");
-//  window.location("main/index.html");
-  return true;
+  
+  window.location = "main/index.html";
+  return false;
 }
 
 function menu( menuform ){
