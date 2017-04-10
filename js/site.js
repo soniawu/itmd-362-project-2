@@ -24,10 +24,11 @@ $.noConflict();
       var term = "noTerm";
 
       $('.user-name').html('Welcome '+userName);
+      
       if ($('#select-term').children().length <= 0) {
         fillTermOpt();
       }
-  
+      
       $('#select-term').on('change',function() {
         term = $('#select-term').val();
         if (term != "noTerm") {
@@ -47,6 +48,10 @@ $.noConflict();
             
       $('.close').on('click', function() {
          $('#ofc-tsc-popup').toggle();
+      });
+  
+      $('#transcript-link').on('click', function() {
+        document.location.href = '../transcript/index.html';
       });
       
       $('#home-btn').on('click', function() {
@@ -91,6 +96,10 @@ $.noConflict();
         $('#nav').removeClass('c5');
       });
       
+      $('#logoutBtn').on('click', function(e) {
+        document.location.href = '../index.html';
+      });
+      
       function fillStrEndDate() {
         var selYear = "";
         var selSemester = "";
@@ -126,7 +135,6 @@ $.noConflict();
               eDate = "Jan 25, " + nextYear;
               break;    
           }
-          console.log(sDate,eDate);
           
           for (var i=0; i<classList.length; i++) {
             classList[i].startDate = sDate;
@@ -137,7 +145,7 @@ $.noConflict();
       function displayTranscript() {
         // This block of data should be obtained from database
         var txt = "";
-        var name = "Kevin ";  // use the user name when known
+        var name = userName;
         var dob = "May 20, 1998";
         var type = "undergraduate";
         var program = "Bachelor Degree";
@@ -211,6 +219,7 @@ $.noConflict();
           currYear--;
         }
       }
+
     })
 })(jQuery);
 
@@ -234,6 +243,7 @@ function login(form){
     return false;
   }
   
+
   window.open("main/index.html");
 //  window.location("main/index.html");
   return true;
