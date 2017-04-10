@@ -351,9 +351,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 }    
 #loginDropdown{
   margin: .8em;
-  
 }
-
   #main {
     margin: 1.563em; /* 25px  25/16=1.563em */
   }
@@ -371,6 +369,9 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   }
   #transcript-title {
     clear: both;
+  }
+  #cls-tbl {
+    font-size: 1.25em; /* 20px  20/16=1.25em */
   }
 }
 /* For screen width greater than 700px */
