@@ -163,8 +163,21 @@ ul li{
   margin-left: 10px;  
 }
 
+#trans-icon img{
+  margin-top: -3.5em;
+  margin-left: 5px; 
+}
+
+#trans-icon figcaption{
+  font-size: 0.667em; /*12/16*/
+  line-height: 1.833em; /* 22/12 */ 
+  max-width: 30px;
+  margin-top: 5.5em;
+  margin-left: 10px;  
+}
+
 #anoucments{
-  margin-top: 7em;
+  margin-top: 1em;
 }
 #main {
   background-color: #eee1e0;
@@ -334,6 +347,18 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 }
 /* ===== STATE STYLES ===== */
 
+/* 450px 28.125em @ 16px */
+@media screen and (min-width: 28.125em) {
+  
+  .icon img, .icon{
+    margin-left: 20px;
+  }
+  
+  #trans-icon img{
+    margin-left: 20px;
+  }
+}
+
 /* 500px 31.25em @ 16px */
 @media screen and (min-width: 31.25em) {}
   /* For screen width greater than 500px */
@@ -377,3 +402,11 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 /* For screen width greater than 700px */
 /*700px 43.75em @ 16px */
 @media screen and (min-width: 43.75em) {}
+
+/* For screen width greater than 700px */
+/*750px 46.875em @ 16px */
+@media screen and (min-width: 46.875em) {
+  /*Nav menu to nav bar*/
+  
+  
+}
