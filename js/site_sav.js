@@ -5,7 +5,6 @@ $.noConflict();
   $(document).ready(
     function() {
       var userName = "David Wong";
-      // This is a hard coded list of classes for the transcript.
       var classList = 
         [{classCode:"ITMD-361",
           className:"Fundamentals of Web Development", 
@@ -24,7 +23,7 @@ $.noConflict();
             level:"CE", grade:"A", startDate:"", endDate:"", credit:3}];
       var term = "noTerm";
 
-      $('.user-name').html('login as '+userName);
+      $('.user-name').html('Welcome '+userName);
       
       if ($('#select-term').children().length <= 0) {
         fillTermOpt();
@@ -34,32 +33,33 @@ $.noConflict();
         term = $('#select-term').val();
         if (term !== "noTerm") {
           fillStrEndDate();
-          // Hide the term selection box and enable transcript information headings
+
           $('#slct-term').addClass('hide');
-          $('#std-info-head,#cur-info-head,#cls-info-head').addClass('trans-info-head');
-       /*   $('#cur-info-head').addClass('trans-info-head');
-          $('#cls-info-head').addClass('trans-info-head'); */
+          $('#std-info-head').addClass('trans-info-head');
+          $('#cur-info-head').addClass('trans-info-head');
+          $('#cls-info-head').addClass('trans-info-head');
           displayTranscript();
         }
       });
       
-      $('#ofc-tsc-btn, .close').on('click', function() {
+      $('#ofc-tsc-btn').on('click', function() {
         $('#ofc-tsc-popup').toggle();
-      });   
+      });
+            
+      $('.close').on('click', function() {
+        $('#ofc-tsc-popup').toggle();
+      });
   
-      $('#transcript-link, #home-btn, #new-term-btn').on('click', function() {
-        var id = this.id;
-        switch(id) {
-          case 'transcript-link' :
-            document.location.href = '../transcript/index.html';
-          break;
-          case 'home-btn' :
-            document.location.href = '../main/index.html';
-          break;
-          case 'new-term-btn' :
-            location.reload();
-          break;
-        };
+      $('#transcript-link').on('click', function() {
+        document.location.href = '../transcript/index.html';
+      });
+      
+      $('#home-btn').on('click', function() {
+        document.location.href = '../main/index.html';
+      });
+      
+      $('#new-term-btn').on('click', function() {
+        location.reload();
       });
       
       $('#navAcademic').on('click', function(e) {
@@ -85,7 +85,7 @@ $.noConflict();
       $('#navLinks').on('click', function(e) {
         e.preventDefault();
         $('#nav').addClass('c5');
-      }); 
+      });
       
       $('.navback').on('click', function(e) {
         e.stopPropagation();
@@ -101,78 +101,106 @@ $.noConflict();
       });
       
       function fillStrEndDate() {
-        var dateRec = {};
+        var selYear = "";
+        var selSemester = "";
         var pattern = /(Spring|Summer|Fall).+(\d{4})/;
+        var matched = null;
+        var sDate = "";
+        var eDate = "";
+        var nextYear;
         var i = 0;
         
         matched = term.match(pattern);
         if(matched) {
-          dateRec.selYear = matched[2];
-          dateRec.selSemester = matched[1]; 
+          selYear = matched[2];
+          selSemester = matched[1]; 
         } else if ((matched = term.match(/(\d{4}).+Professional Learning/))) {
-          dateRec.selYear = matched[1];
-          dateRec.selSemester = "PL";
+          selYear = matched[1];
+          selSemester = "PL";
         }         
           
-        switch(dateRec.selSemester) {
+        switch(selSemester) {
         case "Spring" : 
-          dateRec.sDate = "Feb 20, " + dateRec.selYear;
-          dateRec.eDate = "May 15, " + dateRec.selYear;
+          sDate = "Feb 20, " + selYear;
+          eDate = "May 15, " + selYear;
           
           break;
         case "Summer" :
-          dateRec.sDate = "Jun 12, " + dateRec.selYear;
-          dateRec.eDate = "Aug 3, " + dateRec.selYear;                
+          sDate = "Jun 12, " + selYear;
+          eDate = "Aug 3, " + selYear;                
           break;
         case "Fall" :
         case "PL" :
-          dateRec.sDate = "Aug 20, " + dateRec.selYear;
-          dateRec.nextYear = Number(dateRec.selYear)+1;
-          dateRec.eDate = "Jan 25, " + dateRec.nextYear;
+          sDate = "Aug 20, " + selYear;
+          nextYear = Number(selYear)+1;
+          eDate = "Jan 25, " + nextYear;
           break;    
         }
           
         for ( i=0; i<classList.length; i++) {
-          classList[i].startDate = dateRec.sDate;
-          classList[i].endDate = dateRec.eDate;
+          classList[i].startDate = sDate;
+          classList[i].endDate = eDate;
         }
       }  // fillStrEndDate()
         
       function displayTranscript() {
         // This block of data should be obtained from database
-        var studentRec = {name:"", 
-                        dob:"May 20, 1998",
-                        type: "undergraduate",
-                        program: "Bachelor Degree",
-                        college: "School of Applied Technology",
-                        major: "Applied Technology",
-                        cd: "", cn: "", sd: "", ed: "", crd: "", grd: ""};
         var txt = "";
+        var name = userName;
+        var dob = "May 20, 1998";
+        var type = "undergraduate";
+        var program = "Bachelor Degree";
+        var college = "School of Applied Technology";
+        var major = "Applied Technology";
+        var cd = "";
+        var cn = "";
+        var sd = "";
+        var ed = "";
+        var crd = "";
+        var grd = "";
         var i = 0;
         
-        studentRec.name = userName;
-        $('#transcript-title').html(term + ' Transcript');
-        $('#std-info-head').html("STUDENT INFORMATION");
-        $('#student-info').append('<p>Name : '  + studentRec.name + '</p>');
-        $('#student-info').append('<p>Date of birth : '  + studentRec.dob + '</p>');
-        $('#student-info').append('<p>Student type : '  + studentRec.type + '</p>');
-        $('#cur-info-head').html("CURRICULUM INFORMATION");
-        $('#curr-info').append('<p>Program : '  + studentRec.program + '</p>'); 
-        $('#curr-info').append('<p>College : '  + studentRec.college + '</p>');    
-        $('#curr-info').append('<p>Major : '  + studentRec.major + '</p>'); 
-        $('#cls-info-head').html("COURSES"); 
+        txt = term + ' Transcript';
+        $('#transcript-title').html(txt);
+        
+        txt = "STUDENT INFORMATION";
+        $('#std-info-head').html(txt);
+        
+        txt = '<p>Name : '  + name + '</p>';
+        $('#student-info').append(txt);
+        
+        txt = '<p>Date of birth : '  + dob + '</p>';
+        $('#student-info').append(txt);
+        
+        txt = '<p>Student type : '  + type + '</p>';
+        $('#student-info').append(txt);
+        
+        txt = "CURRICULUM INFORMATION";
+        $('#cur-info-head').html(txt);
+ 
+        txt = '<p>Program : '  + program + '</p>';
+        $('#curr-info').append(txt); 
+        
+        txt = '<p>College : '  + college + '</p>';
+        $('#curr-info').append(txt);    
+        
+        txt = '<p>Major : '  + major + '</p>';
+        $('#curr-info').append(txt); 
+         
+        txt = "COURSES";
+        $('#cls-info-head').html(txt); 
         
         // build table header
         txt = '<table id="cls-tbl" border="1" align="center"><tr><th>Class Code</th><th>Class Name</th><th>Start Date </th><th>End Date</th><th>Credit</th><th>Grade</th></tr></table>';
         $('#class-list').append(txt);
         for (i=0; i<classList.length; i++) {
-          studentRec.cd = classList[i].classCode;
-          studentRec.cn = classList[i].className;
-          studentRec.sd = classList[i].startDate;
-          studentRec.d = classList[i].endDate;
-          studentRec.crd = classList[i].credit;
-          studentRec.grd = classList[i].grade;
-          txt = '<tr><td>'+studentRec.cd+'</td><td>'+studentRec.cn+'</td><td>'+studentRec.sd+'</td><td>'+studentRec.ed+'</td><td>'+studentRec.crd+'</td><td>'+studentRec.grd+'</td></tr>';
+          cd = classList[i].classCode;
+          cn = classList[i].className;
+          sd = classList[i].startDate;
+          ed = classList[i].endDate;
+          crd = classList[i].credit;
+          grd = classList[i].grade;
+          txt = '<tr><td>'+cd+'</td><td>'+cn+'</td><td>'+sd+'</td><td>'+ed+'</td><td>'+crd+'</td><td>'+grd+'</td></tr>';
           $('#cls-tbl').append(txt);
         }
       }  // displayTranscript()
@@ -224,9 +252,9 @@ function login(form){
     return false;
   }
   
-  
-  window.location = "main/index.html";
-  return false;
+  window.open("main/index.html");
+//  window.location("main/index.html");
+  return true;
 }
 
 function menu( menuform ){
