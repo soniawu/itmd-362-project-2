@@ -344,6 +344,10 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   cursor: pointer;
 }
 
+.user-name {
+  font-size: 0.778em; /* 14px 14/18=0.778em */
+  color: gray;
+}
 /* ===== STATE STYLES ===== */
 
 /* 450px 28.125em @ 16px */
