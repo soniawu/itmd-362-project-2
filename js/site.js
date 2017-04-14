@@ -98,16 +98,18 @@ $.noConflict();
         $('#nav').removeClass('c4');
         $('#nav').removeClass('c5');
       });
-      
-      $('#logoutBtn').on('click', function() {
-        document.location.href = '../index.html';
-      });
-      
+
+      /******************
+      * Function fillStrEndDate() is to determine is starting and
+      * ending date base on user selected term. The starting and ending
+      * dates will be filled to the pre-defined class array.
+      ******************/
       function fillStrEndDate() {
         var dateRec = {};
         var pattern = /(Spring|Summer|Fall).+(\d{4})/;
         var i = 0;
         
+        // Find out what is the user selected term, parse the year and semester
         matched = term.match(pattern);
         if(matched) {
           dateRec.selYear = matched[2];
@@ -116,7 +118,8 @@ $.noConflict();
           dateRec.selYear = matched[1];
           dateRec.selSemester = "PL";
         }         
-          
+         
+        // Hard coded starting and end date for each semester.
         switch(dateRec.selSemester) {
         case "Spring" : 
           dateRec.sDate = "Feb 20, " + dateRec.selYear;
@@ -127,6 +130,7 @@ $.noConflict();
           dateRec.sDate = "Jun 12, " + dateRec.selYear;
           dateRec.eDate = "Aug 3, " + dateRec.selYear;                
           break;
+        // Fall semester and Professiona Learning are across year.
         case "Fall" :
         case "PL" :
           dateRec.sDate = "Aug 20, " + dateRec.selYear;
@@ -140,9 +144,12 @@ $.noConflict();
           classList[i].endDate = dateRec.eDate;
         }
       }  // fillStrEndDate()
-        
+ 
+      /******************
+      * Function displayTranscript() is to display transcript data
+      ******************/ 
       function displayTranscript() {
-        // This block of data should be obtained from database
+        // This block of data should be obtained from database in a real system.
         var studentRec = {name:"", 
                         dob:"May 20, 1998",
                         type: "undergraduate",
@@ -153,6 +160,7 @@ $.noConflict();
         var txt = "";
         var i = 0;
         
+        // General student information on the first part of transcript
         studentRec.name = userName;
         $('#transcript-title').html(term + ' Transcript');
         $('#std-info-head').html("STUDENT INFORMATION");
@@ -165,7 +173,7 @@ $.noConflict();
         $('#curr-info').append('<p>Major : '  + studentRec.major + '</p>'); 
         $('#cls-info-head').html("COURSES"); 
         
-        // build table header
+        // Classes student taken on the selected term. 
         txt = '<table id="cls-tbl" border="1" align="center"><tr><th>Class Code</th><th>Class Name</th><th>Start Date </th><th>End Date</th><th>Credit</th><th>Grade</th></tr></table>';
         $('#class-list').append(txt);
         for (i=0; i<classList.length; i++) {
@@ -180,9 +188,10 @@ $.noConflict();
         }
       }  // displayTranscript()
       
-      /* 
-        Function to fill the term selection options.
-      */
+      /******************
+      * Function fillTermOpt() is to fill the term selection options.
+      * It will display 10 year options.
+      ******************/
       function fillTermOpt() {
         var numOfYears = 10;
         var currYear = (new Date()).getFullYear();
@@ -207,6 +216,10 @@ $.noConflict();
     })
 })(jQuery);
 
+/******************
+* Function login() is to handle the login process.
+* Verify user name and password and redirect user to the main page.
+******************/
 function login(form){
   if(form.username.value === "") {
     alert("Error: Username cannot be blank!");
@@ -226,12 +239,15 @@ function login(form){
     form.pwd.focus();
     return false;
   }
-  
-  
+
   window.location = "main/index.html";
   return false;
 }
 
+/******************
+* Function menu() is used in the login page to handle 
+* the pulldown menu option selection.
+******************/
 function menu( menuform ){
   selecteditem = menuform.url.selectedIndex;
   newurl = menuform.url.options[ selecteditem ].value;
