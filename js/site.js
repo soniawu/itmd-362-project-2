@@ -24,7 +24,7 @@ $.noConflict();
             level:"CE", grade:"A", startDate:"", endDate:"", credit:3}];
       var term = "noTerm";
 
-      $('.user-name').html('login as '+userName);
+      $('.user-name').html('Welcome '+userName);
       
       if ($('#select-term').children().length <= 0) {
         fillTermOpt();
@@ -37,8 +37,6 @@ $.noConflict();
           // Hide the term selection box and enable transcript information headings
           $('#slct-term').addClass('hide');
           $('#std-info-head,#cur-info-head,#cls-info-head').addClass('trans-info-head');
-       /*   $('#cur-info-head').addClass('trans-info-head');
-          $('#cls-info-head').addClass('trans-info-head'); */
           displayTranscript();
         }
       });
@@ -47,7 +45,8 @@ $.noConflict();
         $('#ofc-tsc-popup').toggle();
       });   
   
-      $('#transcript-link, #home-btn, #new-term-btn').on('click', function() {
+      // Handle page navigation/reload.
+      $('#transcript-link, #home-btn, #new-term-btn, #logoutBtn').on('click', function() {
         var id = this.id;
         switch(id) {
           case 'transcript-link' :
@@ -59,9 +58,13 @@ $.noConflict();
           case 'new-term-btn' :
             location.reload();
           break;
+          case 'logoutBtn' :
+            document.location.href = '../index.html';
+          break;         
         };
       });
       
+      // This block of event listeners is for the main page tabs
       $('#navAcademic').on('click', function(e) {
         e.preventDefault();
         $('#nav').addClass('c1');
