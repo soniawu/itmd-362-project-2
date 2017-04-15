@@ -49,19 +49,19 @@ $.noConflict();
       $('#transcript-link, #home-btn, #new-term-btn, #logoutBtn').on('click', function() {
         var id = this.id;
         switch(id) {
-          case 'transcript-link' :
-            document.location.href = '../transcript/index.html';
+        case 'transcript-link' :
+          document.location.href = '../transcript/index.html';
           break;
-          case 'home-btn' :
-            document.location.href = '../main/index.html';
+        case 'home-btn' :
+          document.location.href = '../main/index.html';
           break;
-          case 'new-term-btn' :
-            location.reload();
+        case 'new-term-btn' :
+          location.reload();
           break;
-          case 'logoutBtn' :
-            document.location.href = '../index.html';
+        case 'logoutBtn' :
+          document.location.href = '../index.html';
           break;         
-        };
+        }
       });
       
       // This block of event listeners is for the main page tabs
@@ -108,6 +108,7 @@ $.noConflict();
         var dateRec = {};
         var pattern = /(Spring|Summer|Fall).+(\d{4})/;
         var i = 0;
+        var matched = false;
         
         // Find out what is the user selected term, parse the year and semester
         matched = term.match(pattern);
@@ -150,13 +151,14 @@ $.noConflict();
       ******************/ 
       function displayTranscript() {
         // This block of data should be obtained from database in a real system.
-        var studentRec = {name:"", 
-                        dob:"May 20, 1998",
-                        type: "undergraduate",
-                        program: "Bachelor Degree",
-                        college: "School of Applied Technology",
-                        major: "Applied Technology",
-                        cd: "", cn: "", sd: "", ed: "", crd: "", grd: ""};
+        var studentRec = {
+          name:"", 
+          dob:"May 20, 1998",
+          type: "undergraduate",
+          program: "Bachelor Degree",
+          college: "School of Applied Technology",
+          major: "Applied Technology",
+          cd: "", cn: "", sd: "", ed: "", crd: "", grd: ""};
         var txt = "";
         var i = 0;
         
