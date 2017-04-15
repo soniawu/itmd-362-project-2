@@ -164,23 +164,23 @@ $.noConflict();
         studentRec.name = userName;
         $('#transcript-title').html(term + ' Transcript');
         $('#std-info-head').html("STUDENT INFORMATION");
-        $('#student-info').append('<p>Name : '  + studentRec.name + '</p>');
-        $('#student-info').append('<p>Date of birth : '  + studentRec.dob + '</p>');
-        $('#student-info').append('<p>Student type : '  + studentRec.type + '</p>');
+        $('#student-info').append('<p><span class="bold">Name</span> : '  + studentRec.name + '</p>');
+        $('#student-info').append('<p><span class="bold">Date of birth</span> : '  + studentRec.dob + '</p>');
+        $('#student-info').append('<p><span class="bold">Student type</span>  : '  + studentRec.type + '</p>');
         $('#cur-info-head').html("CURRICULUM INFORMATION");
-        $('#curr-info').append('<p>Program : '  + studentRec.program + '</p>'); 
-        $('#curr-info').append('<p>College : '  + studentRec.college + '</p>');    
-        $('#curr-info').append('<p>Major : '  + studentRec.major + '</p>'); 
+        $('#curr-info').append('<p><span class="bold">Program :</span> '  + studentRec.program + '</p>'); 
+        $('#curr-info').append('<p><span class="bold">College :</span> '  + studentRec.college + '</p>');    
+        $('#curr-info').append('<p><span class="bold">Major   :</span> '  + studentRec.major + '</p>'); 
         $('#cls-info-head').html("COURSES"); 
         
         // Classes student taken on the selected term. 
-        txt = '<table id="cls-tbl" border="1" align="center"><tr><th>Class Code</th><th>Class Name</th><th>Start Date </th><th>End Date</th><th>Credit</th><th>Grade</th></tr></table>';
+        txt = '<table id="cls-tbl" border="1" align="center"><tr class="bold"><th>Class Code</th><th>Class Name</th><th>Start Date </th><th>End Date</th><th>Credit</th><th>Grade</th></tr></table>';
         $('#class-list').append(txt);
         for (i=0; i<classList.length; i++) {
           studentRec.cd = classList[i].classCode;
           studentRec.cn = classList[i].className;
           studentRec.sd = classList[i].startDate;
-          studentRec.d = classList[i].endDate;
+          studentRec.ed = classList[i].endDate;
           studentRec.crd = classList[i].credit;
           studentRec.grd = classList[i].grade;
           txt = '<tr><td>'+studentRec.cd+'</td><td>'+studentRec.cn+'</td><td>'+studentRec.sd+'</td><td>'+studentRec.ed+'</td><td>'+studentRec.crd+'</td><td>'+studentRec.grd+'</td></tr>';
