@@ -416,11 +416,79 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 /* For screen width greater than 700px */
 /*700px 43.74em @ 16px */
 @media screen and (min-width: 43.74em) {
+	
+  #nav{
+    width: 100%;
+  }
+
+  #nav li{
+    margin: 0;
+    list-style: none;
+	color: #FFFFFF;
+	background: #1C1C1B;
+	padding: 0 30px;
+	margin: 0;
+  }
+  
+  #nav ul{
+    margin-left: 0;
+	width: 100%;
+  }
+  
+  #nav ul li ul li {
+	padding: 0;
+	background: #1C2C1B;
+  }
+
+  #nav > ul > li{
+    float: center;
+    display: inline-block;
+    position: relative;
+  }
+
+  #nav li:hover .inner {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .inner {
+    width: 160%;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity linear 0.15s;
+    box-shadow: 0 2px 3px rgba(0,0,0,0,2);
+    background: #2e2728;  
+  }
+
+  .inner li {
+    display: block;
+  }
+
+  #imgLinks, #anoucments{
+    display: none;	
+  }
+  
+  #nav ul li:after, #nav ul li ul li:after {
+    display: none;
+  }
+  
+  #nav ul li ul li:first-child {
+    display: none;
+  }
+  
+  .arrow {
+	display: none;
+	position: absolute;
+  }
 }
 /* For screen width greater than 700px */
 
 /*700px 43.75em @ 16px */
-/*@media screen and (max-width: 46.874em) {*/
+@media screen and (max-width: 43.75em) {
   /*Nav menu to nav bar*/
   
 .inner {
@@ -462,5 +530,4 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   margin-top: -9.8em;
   transition:left .5s;
  }
-
-/*}*/
+}
