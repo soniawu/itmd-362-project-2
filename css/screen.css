@@ -75,13 +75,6 @@ ul li {
 }
 /* ===== LAYOUT STYLES ===== */
 
-#iitlogo img {
-  position: absolute;
-  width: 4.444em; /* 80px 80/18=4.444em */
-  margin-top: -5.5em;
-  margin-left: 60%;
-}
-
 /*nav*/
 
 #nav a {
@@ -135,6 +128,11 @@ ul li {
 }
 
 /*nav icons*/
+.icon img {
+  position: absolute;
+  width: 3.333em; /* 60px 60/18=3.333em */
+  left: 0;
+}
 
 #blackboard-icon img {
   margin-top: -3.2em;
@@ -190,6 +188,13 @@ ul li {
   text-align: center;
 }
 
+#iitlogo img {
+  position: absolute;
+  width: 4.444em; /* 80px 80/18=4.444em */
+  margin-top: -5.5em;
+  margin-left: 60%;
+}
+
 #anoucments {
   margin: 0 3.4375%;
   margin-top: 2em;
@@ -201,7 +206,7 @@ ul li {
   font-size: 2.25em;  /*  40.5/18 */
   line-height: 2.222em;  /* 40px 40/18=2.222em */
   background-color: black;
-  box-shadow: inset 0 0 .3em white;
+  box-shadow: inset 0 0 0.3em white;
   color: white;
   text-align: center;
 }
@@ -269,12 +274,6 @@ ul li {
   left: 90%;
 }
 
-.icon img {
-  position: absolute;
-  width: 3.333em; /* 60px 60/18=3.333em */
-  left: 0;
-}
-
 .trans-info-head {
   background-color: #6d92a0;
   color: #022735;
@@ -309,6 +308,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 #transcript-nav-bar  li:hover {
   background-color: #b10000;
 }
+
 .popup {
   display: none;
   position: fixed;
@@ -320,6 +320,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
 }
+
 .popup-cnt {
   background-color: #fefefe;
   margin: auto;
@@ -351,6 +352,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 .bold {
   font-weight: bold;
 }
+
 /* ===== STATE STYLES ===== */
 
 /* 450px 28.125em @ 16px */
@@ -363,7 +365,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   #trans-icon img {
     margin-left: 6.5%;
   }
-  
+
   #iitlogo img {
     margin-left: 15em;
   }
@@ -417,41 +419,34 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 /* For screen width greater than 700px */
 /*700px 43.74em @ 16px */
 @media screen and (min-width: 43.74em) {
-	
-  #nav{
+
+  #nav {
     width: 100%;
   }
 
-  #nav li{
-    margin: 0;
+  #nav li {
     list-style: none;
-	color: #FFFFFF;
-	background: #1C1C1B;
-	padding: 0 30px;
-	margin: 0;
-  }
-  
-  #nav ul{
-    margin-left: 0;
-	width: 100%;
-  }
-  
-  #nav ul li ul li {
-	padding: 0;
-	font-size: 0.8148em;
-	padding: 0 5px;
-	background: #9E9E98;
+    color: #FFFFFF;
+    background: #1C1C1B;
+    margin: 0;
+    padding: 0 30px;
   }
 
-  #nav > ul > li{
+  #nav > ul > li {
     float: center;
     display: inline-block;
     position: relative;
   }
 
-  #nav li:hover .inner {
-    z-index: 1;
-    opacity: 1;
+  #nav ul {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #nav ul li ul li {
+    font-size: 0.8148em;
+    padding: 0 5px;
+    background: #9E9E98;
   }
 
   .inner {
@@ -461,23 +456,28 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
     left: 0;
     z-index: -1;
     opacity: 0;
-    background: #2e2728;  
+    background: #2e2728;
   }
- 
+
+  #nav li:hover .inner {
+    z-index: 1;
+    opacity: 1;
+  }
+
   #nav ul li:last-child {
     background: #CC0000;
   }
-  
+
   #nav ul li ul li:last-child {
     background: #9E9E98;
   }
-  
-  #nav ul li:after, #imgLinks, #nav ul li ul li:after, #nav ul li ul li:first-child,  .arrow {
+
+  #nav ul li:after, #imgLinks, #nav ul li ul li:after, #nav ul li ul li:first-child, .arrow {
     display: none;
   }
-  
+
   .arrow {
-	position: absolute;
+    position: absolute;
   }
 }
 /* For screen width greater than 700px */
@@ -485,48 +485,48 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 /*700px 43.75em @ 16px */
 @media screen and (max-width: 43.6875em) {
   /*Nav menu to nav bar*/
-  
+
   #nav ul {
     transition: all 1s;
   }
-  
+
   .inner {
     position: absolute;
     left: 375em; /* 6000px 6000/16=375em */
     min-height: 13em;
   }
- 
-  .c1 span, .c2 span, .c3 span, .c4 span, .c5 span{
-    display: None;
+
+  .c1 span, .c2 span, .c3 span, .c4 span, .c5 span {
+    display: none;
   }
 
   .c1 #academic {
     left: 0;
     margin-top: -3.25em;
-    transition:left .5s;
+    transition: left 0.5s;
   }
 
   .c2 #finance {
     left: 0;
     margin-top: -4.9em;
-    transition:left .5s;
+    transition: left 0.5s;
   }
 
   .c3 #activ {
     left: 0;
     margin-top: -6.55em;
-    transition:left .5s;
+    transition: left 0.5s;
   }
 
   .c4 #advisor {
     left: 0;
     margin-top: -8.18em;
-    transition:left .5s;
+    transition: left 0.5s;
   }
 
   .c5 #links {
     left: 0;
     margin-top: -9.8em;
-    transition:left .5s;
+    transition: left 0.5s;
   }
 }
