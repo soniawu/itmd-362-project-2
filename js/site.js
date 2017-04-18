@@ -65,27 +65,27 @@ $.noConflict();
       });
       
       // This block of event listeners is for the main page tabs
-      $('#navAcademic').on('click', function(e) {
+      $('#nav-academic').on('click', function(e) {
         e.preventDefault();
         $('#nav').addClass('c1');
       });
       
-      $('#navFinance').on('click', function(e) {
+      $('#nav-finance').on('click', function(e) {
         e.preventDefault();
         $('#nav').addClass('c2');
       });
       
-      $('#navActivities').on('click', function(e) {
+      $('#nav-activities').on('click', function(e) {
         e.preventDefault();
         $('#nav').addClass('c3');
       });
       
-      $('#navAdvisor').on('click', function(e) {
+      $('#nav-advisor').on('click', function(e) {
         e.preventDefault();
         $('#nav').addClass('c4');
       });
       
-      $('#navLinks').on('click', function(e) {
+      $('#nav-links').on('click', function(e) {
         e.preventDefault();
         $('#nav').addClass('c5');
       }); 
