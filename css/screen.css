@@ -259,6 +259,11 @@ ul li {
   text-align: center;
 }
 
+#qlinks{
+  display: none;
+  position: absolute;
+}
+
 /* ===== MODULAR STYLES ===== */
 
 .boxed {
