@@ -293,9 +293,6 @@ ul li {
 USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 
 */
-#nav ul {
-  transition: all 1s;
-}
 
 #transcript-nav-bar  li:nth-child(odd) {
   background-color: #410000;
@@ -365,6 +362,10 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 
   #trans-icon img {
     margin-left: 6.5%;
+  }
+  
+  #iitlogo img {
+    margin-left: 15em;
   }
 }
 
@@ -437,7 +438,9 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   
   #nav ul li ul li {
 	padding: 0;
-	background: #1C2C1B;
+	font-size: 0.8148em;
+	padding: 0 5px;
+	background: #9E9E98;
   }
 
   #nav > ul > li{
@@ -453,81 +456,77 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
 
   .inner {
     width: 160%;
-    padding: 5px 0;
+    padding: 5px 5px;
     position: absolute;
-    top: 100%;
     left: 0;
     z-index: -1;
     opacity: 0;
-    transition: opacity linear 0.15s;
-    box-shadow: 0 2px 3px rgba(0,0,0,0,2);
     background: #2e2728;  
   }
-
-  .inner li {
-    display: block;
-  }
-
-  #imgLinks, #anoucments{
-    display: none;	
+ 
+  #nav ul li:last-child {
+    background: #CC0000;
   }
   
-  #nav ul li:after, #nav ul li ul li:after {
-    display: none;
+  #nav ul li ul li:last-child {
+    background: #9E9E98;
   }
   
-  #nav ul li ul li:first-child {
+  #nav ul li:after, #imgLinks, #nav ul li ul li:after, #nav ul li ul li:first-child,  .arrow {
     display: none;
   }
   
   .arrow {
-	display: none;
 	position: absolute;
   }
 }
 /* For screen width greater than 700px */
 
 /*700px 43.75em @ 16px */
-@media screen and (max-width: 43.75em) {
+@media screen and (max-width: 43.6875em) {
   /*Nav menu to nav bar*/
   
-.inner {
-  position: absolute;
-  left: 375em; /* 6000px 6000/16=375em */
-  min-height: 13em;
-}
+  #nav ul {
+    transition: all 1s;
+  }
+  
+  .inner {
+    position: absolute;
+    left: 375em; /* 6000px 6000/16=375em */
+    min-height: 13em;
+  }
  
-.c1 span, .c2 span, .c3 span, .c4 span, .c5 span{
-  display: None;
-}
+  .c1 span, .c2 span, .c3 span, .c4 span, .c5 span{
+    display: None;
+  }
 
-.c1 #academic {
-  left: 0;
-  margin-top: -3.25em;
-  transition:left .5s;
- }
+  .c1 #academic {
+    left: 0;
+    margin-top: -3.25em;
+    transition:left .5s;
+  }
 
-.c2 #finance {
-  left: 0;
-  margin-top: -4.9em;
-  transition:left .5s;
- }
+  .c2 #finance {
+    left: 0;
+    margin-top: -4.9em;
+    transition:left .5s;
+  }
 
-.c3 #activ {
-  left: 0;
-  margin-top: -6.55em;
-  transition:left .5s;
- }
+  .c3 #activ {
+    left: 0;
+    margin-top: -6.55em;
+    transition:left .5s;
+  }
 
-.c4 #advisor {
-  left: 0;
-  margin-top: -8.18em;
-  transition:left .5s;
- }
+  .c4 #advisor {
+    left: 0;
+    margin-top: -8.18em;
+    transition:left .5s;
+  }
 
-.c5 #links {
-  left: 0;
-  margin-top: -9.8em;
-  transition:left .5s;
- }
+  .c5 #links {
+    left: 0;
+    margin-top: -9.8em;
+    transition:left .5s;
+  }
 }
