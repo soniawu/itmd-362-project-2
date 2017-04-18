@@ -263,7 +263,7 @@ ul li {
 
 .boxed {
   background-image: url("../img/whiteOpaque.png");
-  opacity: 100%;
+  opacity: 1;
   border: 0.25em solid darkred;
   padding: 2%;
   width: 25%;
@@ -379,7 +379,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.25;
-    margin: 20 auto;
+    margin: 20em auto;
     height: auto;
   }
 
@@ -433,7 +433,6 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
   }
 
   #nav > ul > li {
-    float: center;
     display: inline-block;
     position: relative;
   }
