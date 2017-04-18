@@ -379,7 +379,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.25;
-    margin: 20em auto;
+    margin: 20% auto;
     height: auto;
   }
 
@@ -471,7 +471,7 @@ USE WITH JS TO PROVIDE FUNCTIONALITY TO THE MENU
     background: #9E9E98;
   }
 
-  #nav ul li:after, #imgLinks, #nav ul li ul li:after, #nav ul li ul li:first-child, .arrow {
+  #nav ul li:after, #img-links, #nav ul li ul li:after, #nav ul li ul li:first-child, .arrow {
     display: none;
   }
 
